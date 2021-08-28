@@ -23,7 +23,7 @@ body {
 .header h1 .seo {
     color: #d9dcd6;
 }
-/* one of the font families, Calibri, listed here wasnt in quotes, not sure if its necessary for certain fonts like Arial? */
+
 .header div {
     padding-top: 15px;
     margin-right: 20px;
@@ -119,10 +119,9 @@ p {
     margin: 10px auto;
     max-width: 150px;
 }
-
+/* omittied the 'clear' declaration because it didnt seem to be necessary */
 .footer {
     padding: 30px;
-    clear: none;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 }
