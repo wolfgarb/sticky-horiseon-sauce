@@ -14,6 +14,7 @@ header {
     background-color: #2a607c;
     color: #ffffff;
     text-decoration: none;
+    
 }
 
 header h1 {
@@ -24,43 +25,45 @@ header h1 {
 header h1 .seo {
     color: #d9dcd6;
 }
-
+/* removed margin declaration to git rid of overflow */
 header nav {
     padding-top: 15px;
-    margin-right: 20px;
-    float: right;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     font-size: 20px;
 }
 
 header nav ul li {
     display: inline-block;
-    margin-left: 25px;
+    margin-right: 20px;
 }
 
-.hero {
-    height: 800px;
-    width: 100%;
-    margin-bottom: 25px;
-    background-image: url("../images/digital-marketing-meeting.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-section a, p {
+header nav ul li a {
     color: #ffffff;
     text-decoration: none;
+}
+
+.hero img {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    /* margin-bottom: 20px; */
+}
+
+/* consolidated a + p while removing some declarations that are already inherit */
+.content a, p {
     font-size: 16px;
 }
 
 
 .content {
-    width: 75%;
     display: inline-block;
-    margin: 20px;
+    /* consolidated margin declaration to one line */
+    margin-left: 20px;
+    width: 70%;
 }
 
-/* i did the same thing with consolidating here, all the multiple class names listed seperately isnt necessary and this saves room! */
+/* i did the same thing with consolidating here as i did with the content below, all the multiple class names listed seperately isnt necessary and this saves room! */
 .content h2 {
     margin-bottom: 20px;
     font-size: 36px;
@@ -69,10 +72,11 @@ section a, p {
 .content div {
     margin-bottom: 20px;
     padding: 50px;
-    height: 300px;
+    height: 289px;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
     color: #ffffff;
+    float: left;
 }
 /* here i consolidated all the content images into one declaration, cutting down on the redundancy of multiple class names with the same declarations*/
 .content img {
@@ -88,21 +92,17 @@ section a, p {
     float: right;
     margin-left: 25px;
 }
-
+/* i consolidated benefits into one class, they were previously seperated */
 .benefits {
-    margin: 40px 20px;
+    margin-right: 20px;
     padding: 20px;
-    clear: both;
-    float: right;
-    width: 20%;
     height: 100%;
+    width: 20%;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
-    vertical-align: auto;
-}
-
-.benefits {
     color: #ffffff;
+    float: right;
+    /* vertical-align: auto; */
 }
 
 .benefits h3 {
