@@ -42,12 +42,14 @@ header div ul li a {
     margin-right: 20px;
 }
 
+.hero {
+    margin-bottom: 20px;
+}
 .hero img {
     background-size: cover;
     background-position: center;
     position: relative;
     width: 100%;
-    margin-bottom: 20px;
 }
 
 /* consolidated a + p while removing some declarations that are already inherit */
