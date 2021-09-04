@@ -1,8 +1,8 @@
 * {
     box-sizing: border-box;
-    padding: 0;
     margin: 0;
 }
+/* i ommitted the declaration for 'padding: 0' because it wasnt making any necessary changes*/
 
 body {
     background-color: #d9dcd6;
@@ -13,8 +13,6 @@ header {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
     color: #ffffff;
-    text-decoration: none;
-    
 }
 
 header h1 {
@@ -25,21 +23,23 @@ header h1 {
 header h1 .seo {
     color: #d9dcd6;
 }
+
 /* removed margin declaration to git rid of overflow */
-header nav {
+header div {
     padding-top: 15px;
+    float: right;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     font-size: 20px;
 }
 
-header nav ul li {
+header div ul li {
     display: inline-block;
-    margin-right: 20px;
 }
 
-header nav ul li a {
+header div ul li a {
     color: #ffffff;
     text-decoration: none;
+    margin-right: 20px;
 }
 
 .hero img {
@@ -47,23 +47,31 @@ header nav ul li a {
     background-position: center;
     position: relative;
     width: 100%;
-    /* margin-bottom: 20px; */
+    margin-bottom: 20px;
 }
 
 /* consolidated a + p while removing some declarations that are already inherit */
-.content a, p {
+p {
     font-size: 16px;
 }
 
-
-.content {
-    display: inline-block;
-    /* consolidated margin declaration to one line */
-    margin-left: 20px;
-    width: 70%;
+.float-left {
+    float: left;
+    margin-right: 30px;
 }
 
-/* i did the same thing with consolidating here as i did with the content below, all the multiple class names listed seperately isnt necessary and this saves room! */
+.float-right {
+    float: right;
+    margin-left: 30px;
+}
+
+.content {
+    max-width: 75%;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/* consolidated all the multiple class names listed seperately to save room and cut down on redundancy of declarations */
 .content h2 {
     margin-bottom: 20px;
     font-size: 36px;
@@ -72,41 +80,32 @@ header nav ul li a {
 .content div {
     margin-bottom: 20px;
     padding: 50px;
-    height: 289px;
+    /* took away height: 300px; because it caused text to overflow out of the div when the window shrank*/
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
     color: #ffffff;
     float: left;
 }
-/* here i consolidated all the content images into one declaration, cutting down on the redundancy of multiple class names with the same declarations*/
+/* consolidated all the content images into one declaration, cutting down on the redundancy of multiple class names with the same declarations */
 .content img {
     max-height: 200px;
+    max-width: 300px;
 }
 
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
-
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
-/* i consolidated benefits into one class, they were previously seperated */
+/* consolidated benefits into one class, they were previously seperated */
 .benefits {
-    margin-right: 20px;
-    padding: 20px;
-    height: 100%;
+    margin-left: 20px;
+    padding: 30px;
     width: 20%;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
     color: #ffffff;
-    float: right;
-    /* vertical-align: auto; */
+    display: inline-block;
+    vertical-align: top;
 }
 
 .benefits h3 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -115,7 +114,8 @@ header nav ul li a {
     margin: 10px auto;
     max-width: 150px;
 }
-/* omittied the 'clear' declaration because it didnt seem to be necessary */
+
+/* omittied the 'clear: none' declaration because it is default */
 footer {
     padding: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
